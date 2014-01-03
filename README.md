@@ -1,7 +1,7 @@
 memory_leak_finder
 ==================
 
-Find memory leaks in your ruby code.
+Find memory leaks in your ruby code. Works with ruby 2.1 or higher.
 
 Installation
 ============
