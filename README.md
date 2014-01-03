@@ -16,6 +16,9 @@ Usage
 Let's asume, there is a method that leaks memory.
 
 ```
+require "rubygems"
+require "memory_leak_finder"
+
 def add_numbers(a, b)
   @result = []
   @result << a
@@ -28,7 +31,7 @@ MemoryLeakFinder.trace do
 end
 ```
 
-Outputs `LEAK! Array [23, 42] allocated at __FILE__:2: approx. 0 bytes`
+Outputs `LEAK! Array [23, 42] allocated at test:5: approx. 0 bytes`
 and returns false. Because the variable `@result` can still be accessed
 after the method returns, it leaks memory.
 
