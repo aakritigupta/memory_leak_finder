@@ -1,7 +1,7 @@
 require 'objspace'
 
 module MemoryLeakFinder
-  def trace
+  def self.trace
     raise "Block required" unless block_given?
 
     gc_params = {full_mark: true, immediate_sweep: true}.freeze
